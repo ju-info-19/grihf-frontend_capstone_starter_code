@@ -1,3 +1,4 @@
+
 ```jsx
 import React, { useState } from 'react';
 import axios from 'axios';
@@ -11,7 +12,7 @@ const Sign_Up = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('https://stayhealthy-api.com/api/register', formData);
+            const response = await axios.post('https://stayhealthy-api.com/api/auth/register', formData);
             setMessage('✅ Inscription réussie !');
         } catch (error) {
             setMessage('❌ Erreur lors de l\'inscription');
