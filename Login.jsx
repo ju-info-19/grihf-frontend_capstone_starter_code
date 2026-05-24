@@ -10,7 +10,8 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('https://stayhealthy-api.com/api/login', credentials);
+            // Assurez-vous que l'endpoint est /api/auth/login
+                const response = await axios.post('https://stayhealthy-api.com/api/auth/login', credentials);
             localStorage.setItem('token', response.data.token);
             setMessage('✅ Connexion réussie !');
         } catch (error) {
